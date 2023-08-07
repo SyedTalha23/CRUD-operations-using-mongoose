@@ -1,5 +1,5 @@
+npm install the required dependencies
 // mongoose docs: https://mongoosejs.com/docs/index.html
-
 // getting-started.js
 const mongoose = require('mongoose');
 
@@ -25,42 +25,42 @@ async function main() {
 
   // single inserts-----------------------------------------
 
-//   const person=new Person({
-//     name:"bbb",
-//     age:2
-//   })
-//   const person=new Person({
-//     name:"aaa",
-//     age:1
-//   })
+  const person=new Person({
+    name:"bbb",
+    age:2
+  })
+  const person=new Person({
+    name:"aaa",
+    age:1
+  })
 
-//   const person=new Person({
-//     age:5
-//   })
+  const person=new Person({
+    age:5
+  })
 
-//   await person.save();
+  await person.save();
 
 // multiple inserts----------------------------------------
 
-//   const people=[
-//     {
-//         name:"ccc",
-//         age:3
-//     },
-//     {
-//         name:"ddd",
-//         age:4
-//     }]
+  const people=[
+    {
+        name:"ccc",
+        age:3
+    },
+    {
+        name:"ddd",
+        age:4
+    }]
 
-//     await Person.insertMany(people)
-//     console.log("done");
+    await Person.insertMany(people)
+    console.log("done");
 
 //find operation----------------------------------------
-//   const data= await Person.find({})
-//   data.forEach(function(ele){
-//     console.log(ele.name);
-//   })
-//   console.log(data);
+  const data= await Person.find({})
+  data.forEach(function(ele){
+    console.log(ele.name);
+  })
+  console.log(data);
 
 //below way of find does not work in newer mongoose, cuz find does not accepts callbacks anymore
 // Person.find(function(err,people){
@@ -74,11 +74,11 @@ async function main() {
 
 //update operation--------------------------------------
 
-// await Person.updateOne({_id:"64ca74b7e5abbdaad848a964"},{name:"fff",age:6})
+await Person.updateOne({_id:"64ca74b7e5abbdaad848a964"},{name:"fff",age:6})
 
 // delete operation------------------------------------------
 
-//   await Person.deleteOne({name:"aaa"})
+  await Person.deleteOne({name:"aaa"})
 
 // closing connection --------------------------------------
   mongoose.connection.close();
